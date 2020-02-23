@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../resources/css/crud-view.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion_de_dettes.ClientController">
+   <children>
+      <StackPane fx:id="ro" disable="true" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ProgressIndicator />
+         </children>
+      </StackPane>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1098.0" spacing="20.0" StackPane.alignment="BASELINE_CENTER">
+         <children>
+            <Label prefHeight="40.0" prefWidth="299.0" styleClass="title" text="Gestion de Dettes" />
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="1090.0" spacing="15.0" stylesheets="@../resources/css/crud-view.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton alignment="BASELINE_CENTER" buttonType="RAISED" graphicTextGap="10.0" onAction="#onAdd" prefWidth="157.0" text="إضافة (F1)">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-add" />
+                     </styleClass>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/icons8-add-property-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                  <JFXButton alignment="BASELINE_CENTER" buttonType="RAISED" graphicTextGap="10.0" onAction="#onEdit" text="تعديل (F2)">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-edit" />
+                     </styleClass>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/icons8-edit-property.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_CENTER" buttonType="RAISED" graphicTextGap="10.0" onAction="#onDelete" prefHeight="52.0" prefWidth="213.0" text="حذف (F3)">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-delete" />
+                     </styleClass>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/icons8-delete-document-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Pane prefHeight="60.0" prefWidth="344.0">
+                     <children>
+                        <TextField fx:id="fieldSearch" layoutX="6.0" layoutY="4.0" prefHeight="60.0" prefWidth="327.0" promptText="بحث (F4)" styleClass="textFiel" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <TableView fx:id="tableClient" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="503.0" prefWidth="1090.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="idc" prefWidth="54.0" text="ID " />
+                <TableColumn fx:id="nompc" prefWidth="150.0" text="الاسم و اللقب" />
+                  <TableColumn fx:id="datec" prefWidth="140.0" text="تاريخ الشراء" />
+                  <TableColumn fx:id="desc" prefWidth="190.0" text="مواد التجميل" />
+                  <TableColumn fx:id="prc" prefWidth="150.0" text="المبلغ المدفوع" />
+                  <TableColumn fx:id="prr" prefWidth="150.0" text="المبلغ المتبقي" />
+                  <TableColumn fx:id="prixc" prefWidth="150.0" text="المبلغ الاجمالي" />
+                  <TableColumn fx:id="etatc" prefWidth="100.0" text="الحالة" />
+              </columns>
+            </TableView>
+            <Pane fx:id="panem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1098.0" VBox.vgrow="ALWAYS" />
+         </children>
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

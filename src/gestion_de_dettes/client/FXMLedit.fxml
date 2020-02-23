@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import org.controlsfx.control.NotificationPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="600.0" stylesheets="@../../resources/css/crud-view.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion_de_dettes.client.FXMLeditC">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="36.0" prefWidth="600.0" styleClass="split-pane" stylesheets="@../../resources/css/crud-view.css" translateY="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <NotificationPane closeButtonVisible="false" layoutX="4.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="588.0" text="salah" />
+            <Label layoutX="145.0" layoutY="1.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="301.0" styleClass="label-bright" text=" تعــــــــديل تفــــــــاصيل الزبـــــــون ">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/icons8-edit-property-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+         </children></Pane>
+      <Label layoutX="462.0" layoutY="47.0" prefHeight="30.0" prefWidth="126.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="الاسم و اللقـــب *:" />
+      <Label layoutX="462.0" layoutY="98.0" prefHeight="30.0" prefWidth="126.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="تاريخ أخذ الديـن *:" />
+      <TextField fx:id="nomp" layoutX="73.0" layoutY="44.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" styleClass="field" stylesheets="@../../resources/css/crud-view.css" />
+      <TextField fx:id="prix" layoutX="73.0" layoutY="150.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" promptText="0" styleClass="field" stylesheets="@../../resources/css/crud-view.css" />
+      <Label layoutX="434.0" layoutY="154.0" prefHeight="30.0" prefWidth="157.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="المبلغ الإجمالي(DA) *:" />
+      <Label layoutX="383.0" layoutY="298.0" prefHeight="30.0" prefWidth="205.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="مواد التجميل + لوازم الخياطة :" textAlignment="RIGHT" />
+      <TextArea fx:id="desp" layoutX="72.0" layoutY="329.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="129.0" prefWidth="350.0" stylesheets="@../../resources/css/crud-view.css" />
+      <JFXButton alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="185.0" layoutY="473.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#addclient" prefHeight="52.0" prefWidth="317.0" stylesheets="@../../resources/css/crud-view.css" text="حفظ">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-add" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/icons8-plus-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXDatePicker fx:id="date" defaultColor="#6721eb" layoutX="37.0" layoutY="91.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="389.0" stylesheets="@../../resources/css/crud-view.css" />
+      <StackPane fx:id="root" layoutX="24.0" layoutY="348.0" prefHeight="45.0" prefWidth="600.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TextField fx:id="prixc" layoutX="74.0" layoutY="200.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" promptText="0" styleClass="field" stylesheets="@../../resources/css/crud-view.css" />
+      <Label layoutX="434.0" layoutY="202.0" prefHeight="30.0" prefWidth="148.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="المبلغ المدفوع *:" />
+      <TextField fx:id="prixr" editable="false" layoutX="73.0" layoutY="251.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="350.0" promptText="0" styleClass="field" stylesheets="@../../resources/css/crud-view.css" />
+      <Label layoutX="434.0" layoutY="253.0" prefHeight="30.0" prefWidth="148.0" styleClass="label-exo" stylesheets="@../../resources/css/crud-view.css" text="المبلغ المتبقي *:" />
+   </children>
+</AnchorPane>

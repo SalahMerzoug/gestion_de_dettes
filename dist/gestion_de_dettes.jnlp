@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="gestion_de_dettes.jnlp">
+  <information>
+    <title>gestion_de_dettes</title>
+    <vendor>Salah_Mer</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="gestion_de_dettes.jar" size="722129" download="eager" />
+    <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.1.3.jar" size="62050" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\fontawesomefx-commons-9.1.2.jar" size="24064" download="eager" />
+    <jar href="lib\fontawesomefx-icons525-4.2.0-9.1.2.jar" size="130609" download="eager" />
+    <jar href="lib\hsqldb.jar" size="1467326" download="eager" />
+    <jar href="lib\jackcess-2.1.11.jar" size="882908" download="eager" />
+    <jar href="lib\javafx-ui-common.jar" size="2041321" download="eager" />
+    <jar href="lib\jdbc.jar" size="474964" download="eager" />
+    <jar href="lib\jfoenix-1.6.0.jar" size="2381877" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+    <jar href="lib\jfxtras-agenda-8.0-r5.jar" size="220654" download="eager" />
+    <jar href="lib\jfxtras-common-8.0-r5.jar" size="54046" download="eager" />
+    <jar href="lib\jfxtras-controls-8.0-r5.jar" size="267283" download="eager" />
+    <jar href="lib\jfxtras-fxml-8.0-r5.jar" size="2091" download="eager" />
+    <jar href="lib\jfxtras-labs-8.0-r5.jar" size="1990694" download="eager" />
+    <jar href="lib\rt.jar" size="51744550" download="eager" />
+    <jar href="lib\ucanaccess-4.0.4.jar" size="386403" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="gestion_de_dettes" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="gestion_de_dettes.Gestion_de_dettes"  name="gestion_de_dettes" />
+  <update check="always"/>
+</jnlp>
